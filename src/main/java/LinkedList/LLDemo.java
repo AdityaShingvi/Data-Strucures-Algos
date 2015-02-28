@@ -56,7 +56,9 @@ public class LLDemo {
 		
 		//MyLinkedList newList = new MyLinkedList();
 		//newList.displayList(newList.reverseInPairs(alist));
-		list.reverseInpairsItereative(list);
+		//list.reverseInpairsItereative(list);
+		
+		System.out.println(list.compare(alist, list));
 	}
 
 }

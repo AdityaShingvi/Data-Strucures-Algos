@@ -5,6 +5,9 @@ public class MyLinkedList {
 	private int data;
 	private MyLinkedList next;
 	
+	public MyLinkedList(){
+	}
+	
 	public int getData() {
 		return data;
 	}
@@ -25,6 +28,31 @@ public class MyLinkedList {
 				System.out.print(current.getData() + " ");
 				current = current.getNext();
 		}
+	}
+	
+	public int length(MyLinkedList head){
+		int length = 0;
+		MyLinkedList node = head;
+		while (node != null){
+			node = node.getNext();
+			length++;
+		}
+		return length;
+	}
+	
+	public boolean compare(MyLinkedList head1,MyLinkedList head2){
+		boolean isEqual = true;
+		while(head1 != null || head2 != null){
+			if(head1.getData() == head2.getData()){
+				head1 = head1.getNext();
+				head2 = head2.getNext();
+			}
+			else{
+				isEqual = false;
+				break;
+			}
+		}
+		return isEqual;
 	}
 
 	public MyLinkedList reverseList(MyLinkedList head){
